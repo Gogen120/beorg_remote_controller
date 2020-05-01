@@ -15,7 +15,8 @@ class Client(RabbitConnection):
         channel = self.configure_rabbit()
 
         channel.basic_consume(
-            queue=self._queue_name, on_message_callback=self.callback, auto_ack=True)
+            queue=self._queue_name, on_message_callback=self.callback, auto_ack=True
+        )
 
         channel.start_consuming()
 
