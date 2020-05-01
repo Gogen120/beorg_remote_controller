@@ -21,5 +21,5 @@
 
 ### Запуск сервера и клиента
 
-Дальше надо запустить сервер: `python server.py`
-И затем в отдельном окне запустить клиент `python client.py`
+Дальше надо запустить сервер: `python remote_controller/server.py`
+И затем в отдельном окне запустить клиент `python remote_controller/client.py`
