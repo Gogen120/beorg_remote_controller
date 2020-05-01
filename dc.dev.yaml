@@ -1,0 +1,20 @@
+version: "3"
+
+networks:
+  remote_network:
+    external: true
+
+
+services:
+  remote.rabbit:
+    container_name: remote.rabbit
+    hostname: rabbit
+    image: rabbitmq:3.8.3-management
+    networks:
+      - remote_network
+    environment:
+      - RABBITMQ_DEFAULT_USER
+      - RABBITMQ_DEFAULT_PASS
+    ports:
+      - "5672:5672"
+      - "15672:15672"
